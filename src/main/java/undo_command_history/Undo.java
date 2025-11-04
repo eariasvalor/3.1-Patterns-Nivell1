@@ -19,7 +19,7 @@ public class Undo {
         return instance;
     }
 
-    public List<String> getCommandEntries(){
+    public List<String> getCommandEntries() {
         return Collections.unmodifiableList(commandEntries);
     }
 
@@ -41,12 +41,12 @@ public class Undo {
     public void listCommandEntries() {
         if (commandEntries.isEmpty()) {
             System.out.println("There are no commands to show.");
+        } else {
+            System.out.println("These are the existing commands:");
+            for (String command : commandEntries) {
+                System.out.println(command);
+            }
         }
-        System.out.println("These are the existing commands:");
-        for(String command : commandEntries){
-            System.out.println(command);
-        }
-
     }
 
     void clear() {
