@@ -20,6 +20,9 @@ public class Undo {
     }
 
     public List<String> getCommandEntries() {
+        if(commandEntries.isEmpty()){
+            throw new IllegalArgumentException("The list cannot be empty.");
+        }
         return Collections.unmodifiableList(commandEntries);
     }
 
